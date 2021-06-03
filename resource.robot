@@ -4,7 +4,7 @@ Library          RequestsLibrary                        WITH NAME   Req
 Library          PostgreSQLDB                           WITH NAME   DB
 Library          Collections                            WITH NAME   Col
 Library          categories.Categories                  WITH NAME   Cat
-Library          categories.Categories_rest             WITH NAME   Catdb
+Library          categories_rest.Categories_rest             WITH NAME   Catdb
 Library          JsonValidator
 
 *** Keywords ***

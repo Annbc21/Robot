@@ -16,7 +16,6 @@ From two tables
     ${resp}             Catdb.get title and category      alias=alias   params=select=title,actor,categories(categoryname)&title=like.ACADEMY_ICE*
     ${resp_db}          Cat.get title and category from db
     Col.Lists Should Be Equal     ${resp}      ${resp_db[0]}
-    sleep               1s
 
 Create and check
     [Tags]              Postgrest add
@@ -27,7 +26,7 @@ Create and check
     ${result}           Cat.get categories by category     category=${99}
     ${req}=             Req.Delete On Session     alias     /categories?      params=select=category,categoryname&category=eq.99
     Col.Lists Should Be Equal     ${result[0]}      ${category_list}
-    sleep               1s
+
 Create and check from bd
      [Tags]             DB add
      [Documentation]    Проверка добавления нового поля через DB
@@ -37,7 +36,7 @@ Create and check from bd
      ${result}          Cat.get categories by category     category=${99}
      ${req}=            Req.Delete On Session     alias     /categories?      params=select=category,categoryname&category=eq.99
      Col.Lists Should Be Equal     ${result[0]}      ${category_list}
-     sleep              1s
+
 *** Keywords ***
 Test Setup
     connect to local host
