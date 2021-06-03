@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Suite description
-Resource         ../Res/resource.robot
+Resource         ../Resource_main/resource.robot
 
 *** Keywords ***
 connect to local host
